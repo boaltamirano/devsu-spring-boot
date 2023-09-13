@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -21,8 +22,11 @@ public class Moves {
     @Temporal(TemporalType.DATE)
     private Date date;
     private String typeMove;
-    private double value;
-    private double balance;
+    private double valueMove;
+    private double balanceAvailable;
+
+    @ManyToOne
+    private Account account;
 
     public Moves() {
     }
@@ -35,10 +39,6 @@ public class Moves {
         return date;
     }
 
-    // public void setDate(Date date) {
-    //     this.date = date;
-    // }
-
     public String getTypeMove() {
         return typeMove;
     }
@@ -47,20 +47,28 @@ public class Moves {
         this.typeMove = typeMove;
     }
 
-    public double getValue() {
-        return value;
+    public double getValueMove() {
+        return valueMove;
     }
 
-    public void setValue(double value) {
-        this.value = value;
+    public void setValueMove(double valueMove) {
+        this.valueMove = valueMove;
     }
 
-    public double getBalance() {
-        return balance;
+    public double getBalanceAvailable() {
+        return balanceAvailable;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void setBalanceAvailable(double balanceAvailable) {
+        this.balanceAvailable = balanceAvailable;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
     }
 
     @PrePersist

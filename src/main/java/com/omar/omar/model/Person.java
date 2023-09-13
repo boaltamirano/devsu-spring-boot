@@ -2,16 +2,29 @@ package com.omar.omar.model;
 
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 
 @MappedSuperclass
 public class Person {
 
     @Id
+    @NotBlank(message = "La identificación es obligatoria")
     private String identification;
+
+    @NotBlank(message = "El nombre es obligatorio")
     private String name;
+
+    @NotBlank(message = "El género es obligatorio")
     private String genre;
+
+    @Min(value = 16, message = "La edad debe ser mayor o igual a 16")
+    @Max(value = 90, message = "La edad debe ser menor o igual a 90")
     private int age;
+
     private String address;
+    
     private String phone;
 
     public Person() {

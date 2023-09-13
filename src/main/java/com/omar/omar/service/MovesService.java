@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.omar.omar.model.Moves;
+// import com.omar.omar.repository.AccountRepository;
 import com.omar.omar.repository.MoveRepository;
 
 @Service
@@ -14,6 +15,9 @@ public class MovesService {
     
     @Autowired
     private MoveRepository movementRepository;
+
+    // @Autowired
+    // private AccountRepository accountRepository;
 
     public Moves createMoves(Moves movement) {
 
