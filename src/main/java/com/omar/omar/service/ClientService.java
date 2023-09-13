@@ -18,8 +18,7 @@ public class ClientService {
 
     public Client createClient(Client client) {
 
-        Client updatedClient = ClientUtil.initializeClientData(client);
-        return clientRepository.save(updatedClient);
+        return clientRepository.save(client);
     }
 
 
@@ -41,7 +40,6 @@ public class ClientService {
 
         Client existingClient = clientRepository.getClientByIdentification(identification);
         if (existingClient != null) {
-            existingClient.setIdentification(identification);
             ClientUtil.updateFieldIfNotNull(client.getName(), existingClient::setName);
             ClientUtil.updateFieldIfNotNull(client.getGenre(), existingClient::setGenre);
             ClientUtil.updateFieldIfNotNull(client.getAddress(), existingClient::setAddress);
