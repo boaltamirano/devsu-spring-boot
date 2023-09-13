@@ -4,19 +4,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
 
 @Entity
-public class Client {
+public class Client extends Person{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long clientId;
     private String password;
     private String status;
-
-    @OneToOne
-    private Person person;
 
     public Long getClientId() {
         return clientId;
@@ -37,14 +33,5 @@ public class Client {
     public void setStatus(String status) {
         this.status = status;
     }
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
     
 }
