@@ -1,17 +1,23 @@
 package com.omar.omar.model;
 
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public class Person {
-    
-    private Long personId;
+
+    @Id
+    private String identification;
     private String name;
     private String genre;
     private int age;
-    private String identification;
     private String address;
     private String phone;
 
-    public Long getPersonId() {
-        return personId;
+    
+
+    public Person() {
+        super();
     }
 
     public String getName() {
