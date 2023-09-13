@@ -24,7 +24,7 @@ public class AccountService {
         return (List<Account>) accountRepository.findAll();
     }
 
-    public Account getAccountByIdentification(String numberAccount) {
+    public Account getAccountByNumberAccount(String numberAccount) {
         Account account = accountRepository.getAccountByNumberAccount(numberAccount);
         if (account != null) {
             return account;
@@ -46,7 +46,7 @@ public class AccountService {
     }
 
     @Transactional
-    public void deleteClient(String numberAccount) {
+    public void deleteAccount(String numberAccount) {
         accountRepository.deleteByNumberAccount(numberAccount);
     }
 
