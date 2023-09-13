@@ -14,8 +14,6 @@ public class Person {
     private String address;
     private String phone;
 
-    
-
     public Person() {
         super();
     }
