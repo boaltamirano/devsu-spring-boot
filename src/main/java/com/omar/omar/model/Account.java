@@ -12,6 +12,9 @@ public class Account {
     private double initialBalance;
     private String status;
 
+    public Account() {
+    }
+
     public String getNumberAccount() {
         return numberAccount;
     }
