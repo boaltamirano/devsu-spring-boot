@@ -6,4 +6,6 @@ import com.omar.omar.model.Client;
 
 public interface ClientRepository extends JpaRepository<Client, Long> {
 
+    Client getClientByIdentification(String identification);
+
 }

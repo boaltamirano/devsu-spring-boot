@@ -9,4 +9,5 @@ public interface IClientService {
 	public Client getClientById(Long clientId);
 	public void deleteClient(Long clientId);
 	public List<Client> getAllClients();
+    public Client getClientByIdentification(String identification);
 }

@@ -20,14 +20,22 @@ public class ClientService implements IClientService {
     public Client createClient(Client client) {
 
         Client updatedClient = ClientUtil.initializeClientData(client);
-
         return clientRepository.save(updatedClient);
     }
 
     @Override
-	public List<Client> getAllClients() {
-		return (List<Client> )clientRepository.findAll();
-	}
+    public List<Client> getAllClients() {
+        return (List<Client>) clientRepository.findAll();
+    }
+
+    @Override
+    public Client getClientByIdentification(String identification) {
+        Client client = clientRepository.getClientByIdentification(identification);
+        if (client != null) {
+            return client;
+        }
+        return null;
+    }
 
     public Client updateClient(String identification, Client client) {
 
