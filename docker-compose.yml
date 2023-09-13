@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+    
+    devsu-db:
+        image: mysql:8.0.32
+        restart: unless-stopped
+        environment:
+            MYSQL_ROOT_PASSWORD: admin
+            MYSQL_DATABASE: devsudb
+            MYSQL_USER: omar
+            MYSQL_PASSWORD: secret
+        ports:
+            - '3306:3306'
+        volumes:
+            - devsu-data:/var/lib/mysql
+        networks:
+            - devsu-net
+        cap_add:
+            - SYS_NICE
+
+volumes:
+    devsu-data:
+        name: devsu-data
+networks:
+    devsu-net:
+        external: true
