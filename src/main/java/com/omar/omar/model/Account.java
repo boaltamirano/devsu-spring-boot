@@ -15,9 +15,11 @@ public class Account {
     private String numberAccount;
 
     @NotBlank(message = "El tipo de cuenta es obligatorio")
+    @Pattern(regexp = "^(Ahorro|Corriente)$", message = "El tipo de cuenta debe ser 'Ahorro' o 'Corriente'")
     private String typeAccount;
 
     @NotNull(message = "El saldo inicial es obligatorio")
+    @Min(value = 0, message = "El saldo inicial no puede ser menor que 0")
     private Double initialBalance;
 
     private Boolean status;

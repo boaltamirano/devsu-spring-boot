@@ -4,8 +4,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import com.omar.omar.Helpers.CustomUtils;
 import com.omar.omar.model.Client;
 import com.omar.omar.service.ClientService;
 
@@ -19,9 +21,9 @@ public class ClientController {
     private ClientService clientService;
 
     @PostMapping()
-    public ResponseEntity<Client> createClient(@Valid @RequestBody Client client) {
-        Client createdClient = clientService.createClient(client);
-        return ResponseEntity.ok(createdClient);
+    public ResponseEntity<?> createClient(@Valid @RequestBody Client client, BindingResult result) {
+
+        return CustomUtils.createEntityResponse(client, () -> clientService.createClient(client), result);
     }
 
     @GetMapping()

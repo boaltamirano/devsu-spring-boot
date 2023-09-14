@@ -2,7 +2,6 @@ package com.omar.omar.controller;
 
 import java.util.List;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -25,12 +24,7 @@ public class AccountController {
 
     @PostMapping()
     public ResponseEntity<?> createAccount(@Valid @RequestBody Account account, BindingResult result) {
-        if (result.hasErrors()) {
-            return CustomUtils.buildErrorResponse(HttpStatus.BAD_REQUEST,
-                    "Error de validación" + result.getAllErrors());
-        }
-
-        return CustomUtils.createEntityResponse(account, () -> accountService.createAccount(account));
+        return CustomUtils.createEntityResponse(account, () -> accountService.createAccount(account), result);
     }
 
     @GetMapping()

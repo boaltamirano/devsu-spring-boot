@@ -3,7 +3,6 @@ package com.omar.omar.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -23,12 +22,7 @@ public class MoveController {
 
     @PostMapping()
     public ResponseEntity<?> createMovement(@Valid @RequestBody Moves movement, BindingResult result) {
-        if (result.hasErrors()) {
-            return CustomUtils.buildErrorResponse(HttpStatus.BAD_REQUEST,
-                    "Error de validación" + result.getAllErrors());
-        }
-
-        return CustomUtils.createEntityResponse(movement, () -> movesService.createMoves(movement));
+        return CustomUtils.createEntityResponse(movement, () -> movesService.createMoves(movement), result);
     }
 
     @GetMapping()

@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Pattern;
 
 @Entity
 public class Moves {
@@ -14,7 +16,11 @@ public class Moves {
 
     @Temporal(TemporalType.DATE)
     private Date date;
+
+     @Pattern(regexp = "^(retiro|deposito)$", message = "El tipo de movimiento no debe ser 'retiro' o 'deposito'")
     private String typeMove;
+
+    @Min(value = 1, message = "El valor debe ser mayor o igual a 1")
     private double valueMove;
     private double balanceAvailable;
 
