@@ -2,7 +2,7 @@ package com.omar.omar.model;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -11,13 +11,13 @@ import jakarta.validation.constraints.*;
 public class Client extends Person{
     
     @NotBlank(message = "La contraseña es obligatoria")
-    @Size(min = 8, message = "La contraseña debe tener al menos 8 caracteres")
+    @Size(min = 4, message = "La contraseña debe tener al menos 4 caracteres")
     private String password;
 
     private boolean status;
 
-    @OneToMany(mappedBy = "client")
-    @JsonManagedReference
+    @JsonIgnore
+    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY)
     private List<Account> accounts;
 
     public Client() {

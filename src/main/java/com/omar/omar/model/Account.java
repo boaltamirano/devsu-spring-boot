@@ -2,12 +2,11 @@ package com.omar.omar.model;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.*;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.*;
 
 @Entity
 public class Account {
@@ -23,14 +22,20 @@ public class Account {
 
     private Boolean status;
 
-    @ManyToOne
-    @JsonBackReference
+	@JoinColumn(name="client_id", referencedColumnName="identification")
+	@ManyToOne
     private Client client;
 
-    @OneToMany(mappedBy = "account")
+    @JsonIgnore
+    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY)
     private List<Moves> movements;
 
     public Account() {
+    }
+
+    public Account(String numberAccount) {
+        super();
+        this.numberAccount = numberAccount;
     }
 
     public String getNumberAccount() {
@@ -75,11 +80,6 @@ public class Account {
 
     public void setMovements(List<Moves> movements) {
         this.movements = movements;
-    }
-
-    @Transient
-    public Client getClientInfo() {
-        return this.client;
     }
 
 }

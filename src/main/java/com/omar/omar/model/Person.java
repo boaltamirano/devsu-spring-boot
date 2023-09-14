@@ -8,12 +8,12 @@ public class Person {
 
     @Id
     @NotBlank(message = "La identificación es obligatoria")
+    @Column(name="identification")
     private String identification;
 
     @NotBlank(message = "El nombre es obligatorio")
     private String name;
 
-    @NotBlank(message = "El género es obligatorio")
     private String genre;
 
     @Min(value = 16, message = "La edad debe ser mayor o igual a 16")

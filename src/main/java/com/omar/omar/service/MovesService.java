@@ -2,29 +2,37 @@ package com.omar.omar.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
 
 import com.omar.omar.model.Account;
 import com.omar.omar.model.Moves;
 import com.omar.omar.repository.AccountRepository;
 import com.omar.omar.repository.MoveRepository;
 
+import jakarta.persistence.EntityNotFoundException;
+
 @Service
+@Validated
 public class MovesService {
     
-    @Autowired
-    private MoveRepository movementRepository;
+    private final MoveRepository movementRepository;
+    private final AccountRepository accountRepository;
 
-    @Autowired
-    private AccountRepository accountRepository;
+    public MovesService(MoveRepository moveRepository, AccountRepository accountRepository) {
+        this.movementRepository = moveRepository;
+        this.accountRepository = accountRepository;
+    }
 
+    @Transactional
     public Moves createMoves(Moves movement) {
 
-        // Account account = accountRepository.getAccountByNumberAccount(movement.getAccount().getNumberAccount())
-        //         .orElseThrow(() -> new IllegalArgumentException("La cuenta con ID " + numberAccount + " no existe."));
-        
+        Account account = accountRepository.getAccountByNumberAccount(movement.getAccount().getNumberAccount());
+        if (account == null) {
+            throw new EntityNotFoundException("No se encontró el cliente con la identificación proporcionada.");
+        }
+        movement.setAccount(account);
         return movementRepository.save(movement);
     }
 

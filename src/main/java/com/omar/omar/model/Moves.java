@@ -18,8 +18,8 @@ public class Moves {
     private double valueMove;
     private double balanceAvailable;
 
-    @ManyToOne
-    @JoinColumn(name="account")
+    @JoinColumn(name="account_id", referencedColumnName="numberAccount")
+	@ManyToOne
     private Account account;
 
     public Moves() {
