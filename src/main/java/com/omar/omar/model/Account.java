@@ -2,27 +2,29 @@ package com.omar.omar.model;
 
 import java.util.List;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import jakarta.persistence.*;
+
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class Account {
-    
+
     @Id
     private String numberAccount;
-    
+
     @NotBlank(message = "El tipo de cuenta es obligatorio")
     private String typeAccount;
 
-    @NotBlank(message = "El saldo inicial es obligatorio")
-    private double initialBalance;
-    
+    @NotNull(message = "El saldo inicial es obligatorio")
+    private Double initialBalance;
+
     private Boolean status;
 
     @ManyToOne
+    @JsonBackReference
     private Client client;
 
     @OneToMany(mappedBy = "account")
@@ -75,5 +77,9 @@ public class Account {
         this.movements = movements;
     }
 
-        
+    @Transient
+    public Client getClientInfo() {
+        return this.client;
+    }
+
 }

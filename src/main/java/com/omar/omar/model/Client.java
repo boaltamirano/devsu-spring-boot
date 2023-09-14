@@ -2,10 +2,10 @@ package com.omar.omar.model;
 
 import java.util.List;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 @Entity
 public class Client extends Person{
@@ -17,12 +17,18 @@ public class Client extends Person{
     private boolean status;
 
     @OneToMany(mappedBy = "client")
+    @JsonManagedReference
     private List<Account> accounts;
 
     public Client() {
         super();
     }
 
+    public Client(String identification) {
+        super();
+        this.setIdentification(identification);
+    }
+    
     public String getPassword() {
         return password;
     }

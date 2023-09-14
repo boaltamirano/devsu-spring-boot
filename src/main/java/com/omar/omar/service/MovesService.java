@@ -6,8 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.omar.omar.model.Account;
 import com.omar.omar.model.Moves;
-// import com.omar.omar.repository.AccountRepository;
+import com.omar.omar.repository.AccountRepository;
 import com.omar.omar.repository.MoveRepository;
 
 @Service
@@ -16,11 +17,14 @@ public class MovesService {
     @Autowired
     private MoveRepository movementRepository;
 
-    // @Autowired
-    // private AccountRepository accountRepository;
+    @Autowired
+    private AccountRepository accountRepository;
 
     public Moves createMoves(Moves movement) {
 
+        // Account account = accountRepository.getAccountByNumberAccount(movement.getAccount().getNumberAccount())
+        //         .orElseThrow(() -> new IllegalArgumentException("La cuenta con ID " + numberAccount + " no existe."));
+        
         return movementRepository.save(movement);
     }
 

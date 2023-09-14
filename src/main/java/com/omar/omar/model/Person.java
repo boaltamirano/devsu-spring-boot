@@ -1,10 +1,7 @@
 package com.omar.omar.model;
 
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 @MappedSuperclass
 public class Person {
@@ -24,11 +21,19 @@ public class Person {
     private int age;
 
     private String address;
-    
+
     private String phone;
 
     public Person() {
         super();
+    }
+
+    public String getIdentification() {
+        return identification;
+    }
+
+    public void setIdentification(String identification) {
+        this.identification = identification;
     }
 
     public String getName() {
@@ -53,10 +58,6 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public String getIdentification() {
-        return identification;
     }
 
     public String getAddress() {
