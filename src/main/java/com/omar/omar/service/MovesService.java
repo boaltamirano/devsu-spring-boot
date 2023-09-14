@@ -30,7 +30,7 @@ public class MovesService {
 
         Account account = accountRepository.getAccountByNumberAccount(movement.getAccount().getNumberAccount());
         if (account == null) {
-            throw new EntityNotFoundException("No se encontró el cliente con la identificación proporcionada.");
+            throw new EntityNotFoundException("No se encontró la cuenta con el número proporcionado.");
         }
         movement.setAccount(account);
         return movementRepository.save(movement);

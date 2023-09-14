@@ -3,29 +3,32 @@ package com.omar.omar.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 
+import com.omar.omar.Helpers.CustomUtils;
 import com.omar.omar.model.Moves;
 import com.omar.omar.service.MovesService;
+
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/movements")
 public class MoveController {
-    
+
     @Autowired
     private MovesService movesService;
 
     @PostMapping()
-    public ResponseEntity<Moves> createMovement(@RequestBody Moves movement) {
-        Moves createMovement = movesService.createMoves(movement);
-        return ResponseEntity.ok(createMovement);
+    public ResponseEntity<?> createMovement(@Valid @RequestBody Moves movement, BindingResult result) {
+        if (result.hasErrors()) {
+            return CustomUtils.buildErrorResponse(HttpStatus.BAD_REQUEST,
+                    "Error de validación" + result.getAllErrors());
+        }
+
+        return CustomUtils.createEntityResponse(movement, () -> movesService.createMoves(movement));
     }
 
     @GetMapping()
