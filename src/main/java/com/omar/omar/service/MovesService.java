@@ -7,9 +7,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 
+import com.omar.omar.Helpers.CustomUtils;
 import com.omar.omar.model.Account;
 import com.omar.omar.model.Moves;
 import com.omar.omar.model.dto.CustomAccountDTO;
+import com.omar.omar.model.dto.MovementDTO;
 import com.omar.omar.repository.AccountRepository;
 import com.omar.omar.repository.MoveRepository;
 
@@ -30,7 +32,7 @@ public class MovesService {
     }
 
     @Transactional
-    public Moves createMoves(@Valid Moves movement) throws ValidationException {
+    public MovementDTO createMoves(@Valid Moves movement) throws ValidationException {
 
         try {
             Account account = accountRepository.getAccountByNumberAccount(movement.getAccount().getNumberAccount());
@@ -55,7 +57,7 @@ public class MovesService {
             LocalDateTime dateNow = LocalDateTime.now();
             movement.setAccount(account);
             movement.setDate(dateNow);
-            return movementRepository.save(movement);
+            return CustomUtils.movementReturn(movementRepository.save(movement));
         } catch (Exception e) {
             throw new EntityNotFoundException(e.getMessage());
         }

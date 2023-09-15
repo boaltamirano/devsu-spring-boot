@@ -16,10 +16,10 @@ public class Moves {
     @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime date;
 
-    @Pattern(regexp = "^(Retiro|Deposito)$", message = "El tipo de movimiento no debe ser 'retiro' o 'deposito'")
+    @Pattern(regexp = "^(Retiro|Deposito)$", message = "El tipo de movimiento no debe ser 'Retiro' o 'Deposito'")
     private String typeMove;
 
-    @Min(value = 1, message = "El valor debe ser mayor o igual a 1")
+    @Min(value = 1, message = "El valor de transferencia debe ser mayor o igual a 1")
     private double valueMove;
 
     private double balanceAvailable;

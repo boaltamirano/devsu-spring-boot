@@ -99,4 +99,16 @@ public class CustomUtils {
         return accountDTO;
     }
 
+    public static MovementDTO movementReturn(Moves movement) {
+
+        MovementDTO movementDTO = new MovementDTO();
+        movementDTO.setNumeroCuenta(movement.getAccount().getNumberAccount());
+        movementDTO.setTipo(movement.getAccount().getTypeAccount());
+        movementDTO.setSaldoInical(movement.getAccount().getInitialBalance());
+        movementDTO.setEstado(movement.getAccount().getStatus());
+        movementDTO.setMovimiento(movement.getTypeMove() + " de " + movement.getValueMove());
+
+        return movementDTO;
+    }
+
 }
