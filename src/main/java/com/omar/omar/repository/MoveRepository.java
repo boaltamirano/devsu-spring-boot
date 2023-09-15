@@ -22,4 +22,6 @@ public interface MoveRepository extends JpaRepository<Moves, Long> {
 
     @Query("SELECT m.balanceAvailable FROM Moves m WHERE m.account = :account ORDER BY m.date DESC LIMIT 1")
     Double findTopByAccountOrderByDateDesc(Account account);
+
+    List<Moves> findByAccountAndDateBetween(Account account, LocalDateTime startDate, LocalDateTime endDate);
 }
