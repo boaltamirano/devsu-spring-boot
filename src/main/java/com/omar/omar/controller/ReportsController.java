@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.*;
 
 import com.omar.omar.model.Moves;
+import com.omar.omar.model.dto.ReportDTO;
 import com.omar.omar.service.ReportsService;
 
 
@@ -20,7 +21,7 @@ public class ReportsController {
     }
 
     @GetMapping()
-    public List<Moves> getMovesByAccountAndDate(
+    public List<ReportDTO> getMovesByAccountAndDate(
         @RequestParam String accountId,
         @RequestParam
         String startDate,
