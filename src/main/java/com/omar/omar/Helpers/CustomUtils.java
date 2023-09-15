@@ -10,10 +10,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 
+import com.omar.omar.model.Account;
 import com.omar.omar.model.Client;
 import com.omar.omar.model.Moves;
-import com.omar.omar.model.dto.ClientDTO;
-import com.omar.omar.model.dto.ReportDTO;
+import com.omar.omar.model.dto.*;
 
 import jakarta.validation.ValidationException;
 
@@ -85,6 +85,18 @@ public class CustomUtils {
         clientResponse.setEstado(client.getStatus());
 
         return clientResponse;
+    }
+
+    public static AccountDTO accountReturn(Account account) {
+
+        AccountDTO accountDTO = new AccountDTO();
+        accountDTO.setNumeroCuenta(account.getNumberAccount());
+        accountDTO.setTipo(account.getTypeAccount());
+        accountDTO.setSaldoInical(account.getInitialBalance());
+        accountDTO.setEstado(account.getStatus());
+        accountDTO.setCliente(account.getClient().getName());
+
+        return accountDTO;
     }
 
 }

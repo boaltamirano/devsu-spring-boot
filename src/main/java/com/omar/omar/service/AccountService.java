@@ -10,6 +10,7 @@ import org.springframework.validation.annotation.Validated;
 import com.omar.omar.Helpers.CustomUtils;
 import com.omar.omar.model.Account;
 import com.omar.omar.model.Client;
+import com.omar.omar.model.dto.AccountDTO;
 import com.omar.omar.repository.AccountRepository;
 import com.omar.omar.repository.ClientRepository;
 
@@ -30,14 +31,14 @@ public class AccountService {
     }
 
     @Transactional
-    public Account createAccount(@Valid Account account) throws ValidationException {
+    public AccountDTO createAccount(@Valid Account account) throws ValidationException {
 
         Client client = clientRepository.getClientByIdentification(account.getClient().getIdentification());
         if (client == null) {
             throw new EntityNotFoundException("No se encontró el cliente con la identificación proporcionada.");
         }
         account.setClient(client);
-        return accountRepository.save(account);
+        return CustomUtils.accountReturn(accountRepository.save(account));
     }
 
     public List<Account> getAllAccounts() {
