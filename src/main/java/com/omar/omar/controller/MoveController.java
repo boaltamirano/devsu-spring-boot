@@ -8,7 +8,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import com.omar.omar.Helpers.CustomUtils;
+import com.omar.omar.model.Account;
 import com.omar.omar.model.Moves;
+import com.omar.omar.model.dto.CustomAccountDTO;
 import com.omar.omar.service.MovesService;
 
 import jakarta.validation.Valid;
@@ -26,8 +28,9 @@ public class MoveController {
     }
 
     @GetMapping()
-    public ResponseEntity<List<Moves>> getAllMovements() {
-        List<Moves> movements = movesService.getAllMovements();
+    public ResponseEntity<List<CustomAccountDTO>> getAllMovements() {
+        List<Moves> movement = movesService.getAllMovements();
+        List<CustomAccountDTO> movements = movesService.getAllMovementss(movement);
         return ResponseEntity.ok(movements);
     }
 
@@ -38,6 +41,19 @@ public class MoveController {
             return ResponseEntity.ok(movement);
         }
         return ResponseEntity.notFound().build();
+    }
+
+    @GetMapping("/account/{account}")
+    public ResponseEntity<List<Moves>> getMovementByAccount(@PathVariable Account account) {
+        try {
+            List<Moves> movement = movesService.getMovementByAccount(account);
+            if (movement != null) {
+                return ResponseEntity.ok(movement);
+            }
+            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @DeleteMapping("/{movementId}")

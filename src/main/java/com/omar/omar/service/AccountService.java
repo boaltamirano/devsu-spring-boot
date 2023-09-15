@@ -1,6 +1,7 @@
 package com.omar.omar.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -49,6 +50,11 @@ public class AccountService {
             return account;
         }
         return null;
+    }
+
+    public Account getAccountWithMoviments(String numberAccount) {
+        Optional<Account> accountOptional = accountRepository.getAccountWithMoviments(numberAccount);
+        return accountOptional.orElse(null);
     }
 
     public Account updateAccount(String numberAccount, Account account) {

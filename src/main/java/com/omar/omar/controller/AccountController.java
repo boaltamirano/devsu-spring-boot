@@ -42,6 +42,19 @@ public class AccountController {
         return ResponseEntity.notFound().build();
     }
 
+    @GetMapping("/number/{numberAccount}")
+    public ResponseEntity<?> getAccountWithMovements(@PathVariable String numberAccount) {
+        Account account = accountService.getAccountWithMoviments(numberAccount);
+
+        if (account == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        // Puedes utilizar DTOs (objetos de transferencia de datos) para estructurar la respuesta si es necesario.
+
+        return ResponseEntity.ok(account);
+    }
+
     @PutMapping("/{numberAccount}")
     public ResponseEntity<Account> updateAccount(@PathVariable String numberAccount, @RequestBody Account account) {
         Account updatedAccount = accountService.updateAccount(numberAccount, account);
