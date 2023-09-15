@@ -52,7 +52,7 @@ public class MovesService {
                 validateDeposit(movement, account);
             }
 
-            Date dateNow = new Date();
+            LocalDateTime dateNow = LocalDateTime.now();
             movement.setAccount(account);
             movement.setDate(dateNow);
             return movementRepository.save(movement);

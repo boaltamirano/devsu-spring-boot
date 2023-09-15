@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.omar.omar.Helpers.CustomUtils;
 import com.omar.omar.model.Client;
+import com.omar.omar.model.dto.ClientDTO;
 import com.omar.omar.repository.ClientRepository;
 
 import java.util.List;
@@ -16,8 +17,9 @@ public class ClientService {
     @Autowired
     private ClientRepository clientRepository;
 
-    public Client createClient(Client client) {
-        return clientRepository.save(client);
+    public ClientDTO createClient(Client client) {
+        Client clientResponse = clientRepository.save(client);
+        return CustomUtils.clientReturn(clientResponse);
     }
 
 

@@ -1,8 +1,6 @@
 package com.omar.omar.model;
 
 import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.util.Date;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
@@ -41,9 +39,8 @@ public class Moves {
         return date;
     }
 
-    public void setDate(Date date) {
-        LocalDateTime localDateTime = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
-        this.date = localDateTime;
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 
     public String getTypeMove() {

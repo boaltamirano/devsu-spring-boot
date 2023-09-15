@@ -1,9 +1,8 @@
 package com.omar.omar.Helpers;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
@@ -11,7 +10,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 
+import com.omar.omar.model.Client;
 import com.omar.omar.model.Moves;
+import com.omar.omar.model.dto.ClientDTO;
 import com.omar.omar.model.dto.ReportDTO;
 
 import jakarta.validation.ValidationException;
@@ -52,10 +53,10 @@ public class CustomUtils {
     public static List<ReportDTO> transformToResponseDTO(List<Moves> movesList) {
 
         List<ReportDTO> reportsList = new ArrayList<>();
-        
+
         for (Moves movement : movesList) {
             ReportDTO reportDTO = new ReportDTO();
-            reportDTO.setFecha("2023-09-15");
+            reportDTO.setFecha(ConvertDate(movement.getDate()));
             reportDTO.setCliente(movement.getAccount().getClient().getName());
             reportDTO.setNumeroCuenta(movement.getAccount().getNumberAccount());
             reportDTO.setTipo(movement.getAccount().getTypeAccount());
@@ -69,14 +70,21 @@ public class CustomUtils {
         return reportsList;
     }
 
+    private static String ConvertDate(LocalDateTime originalDate) {
+        DateTimeFormatter myNewFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        return originalDate.format(myNewFormat);
+    }
 
-    // private String ConvertDate(String originalDate) {
-    //     DateTimeFormatter originalFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSSSSS");
-    //     LocalDateTime dataTimeLocal = LocalDateTime.parse(originalDate, originalFormat);
-    //     DateTimeFormatter myMewFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    //     return dataTimeLocal.format(myMewFormat);
-    // }
+    public static ClientDTO clientReturn(Client client) {
 
+        ClientDTO clientResponse = new ClientDTO();
+        clientResponse.setNombres(client.getName());
+        clientResponse.setDirección(client.getAddress());
+        clientResponse.setTeléfono(client.getPhone());
+        clientResponse.setContraseña(client.getPassword());
+        clientResponse.setEstado(client.getStatus());
 
+        return clientResponse;
+    }
 
 }
