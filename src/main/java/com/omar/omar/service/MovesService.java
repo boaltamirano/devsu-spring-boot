@@ -32,23 +32,33 @@ public class MovesService {
     @Transactional
     public Moves createMoves(@Valid Moves movement) throws ValidationException {
 
-        Account account = accountRepository.getAccountByNumberAccount(movement.getAccount().getNumberAccount());
-    
-        if (account == null) {
-            throw new EntityNotFoundException("No se encontró la cuenta con el número proporcionado.");
+        try {
+            Account account = accountRepository.getAccountByNumberAccount(movement.getAccount().getNumberAccount());
+
+            if (account == null) {
+                throw new EntityNotFoundException("No se encontró la cuenta con el número proporcionado.");
+            }
+
+            if (!hasMovementsForAccount(account)) {
+                movement.setBalanceAvailable(account.getInitialBalance());
+            } else {
+                movement.setBalanceAvailable(movementRepository.findTopByAccountOrderByDateDesc(account));
+            }
+
+            if ("Retiro".equals(movement.getTypeMove())) {
+                validateWithdrawal(movement, account);
+            }
+            if ("Deposito".equals(movement.getTypeMove())) {
+                validateDeposit(movement, account);
+            }
+
+            Date dateNow = new Date();
+            movement.setAccount(account);
+            movement.setDate(dateNow);
+            return movementRepository.save(movement);
+        } catch (Exception e) {
+            throw new EntityNotFoundException(e.getMessage());
         }
-    
-        if ("Retiro".equals(movement.getTypeMove())) {
-            validateWithdrawal(movement, account);
-        }  
-        if ("Deposito".equals(movement.getTypeMove())) {
-            validateDeposit(movement, account);
-        }
-    
-        Date dateNow = new Date();
-        movement.setAccount(account);
-        movement.setDate(dateNow);
-        return movementRepository.save(movement);
     }
 
     public List<Moves> getAllMovements() {
@@ -85,11 +95,6 @@ public class MovesService {
         return null;
     }
 
-    @Transactional
-    public void deleteMoves(Long movementId) {
-        movementRepository.deleteById(movementId);
-    }
-
     /************** Helper functions **************/
     private void validateWithdrawal(Moves movement, Account account) throws ValidationException {
         double totalValueToday = getTotalValueMoveForTodayByAccount(account);
@@ -97,22 +102,31 @@ public class MovesService {
         if (totalValueToday + movement.getValueMove() > 1000) {
             throw new EntityNotFoundException("Cupo diario Excedido");
         }
-        if (movement.getValueMove() > account.getInitialBalance()) {
+        if (movement.getValueMove() > movement.getBalanceAvailable()) {
             throw new EntityNotFoundException("Saldo no disponible");
         }
 
-        double newBalance = account.getInitialBalance() - movement.getValueMove();
-        movement.setBalanceAvailable(newBalance);
-    }
-
-    private void validateDeposit(Moves movement, Account account) {
-        double newBalance = account.getInitialBalance() + movement.getValueMove();
+        double newBalance = movement.getBalanceAvailable() - movement.getValueMove();
         movement.setBalanceAvailable(newBalance);
     }
 
     public Long getTotalValueMoveForTodayByAccount(Account account) {
         LocalDateTime currentDate = LocalDateTime.now();
         return movementRepository.getCountOfMovesForTodayByAccount(account, currentDate);
+    }
+
+    private void validateDeposit(Moves movement, Account account) {
+        double newBalance = movement.getBalanceAvailable() + movement.getValueMove();
+        movement.setBalanceAvailable(newBalance);
+    }
+
+    private boolean hasMovementsForAccount(Account account) {
+        try {
+            Integer newAccount = movementRepository.getByAccountNumberAccount(account);
+            return newAccount > 0;
+        } catch (Exception e) {
+            throw new EntityNotFoundException(e.getMessage());
+        }
     }
 
 }

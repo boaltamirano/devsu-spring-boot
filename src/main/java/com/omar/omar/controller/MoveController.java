@@ -56,10 +56,5 @@ public class MoveController {
         }
     }
 
-    @DeleteMapping("/{movementId}")
-    public ResponseEntity<Void> deleteMovement(@PathVariable Long movementId) {
-        movesService.deleteMoves(movementId);
-        return ResponseEntity.noContent().build();
-    }
 
 }

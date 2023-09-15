@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
-import com.omar.omar.Helpers.ClientUtil;
+import com.omar.omar.Helpers.CustomUtils;
 import com.omar.omar.model.Client;
 import com.omar.omar.repository.ClientRepository;
 
@@ -39,12 +39,12 @@ public class ClientService {
 
         Client existingClient = clientRepository.getClientByIdentification(identification);
         if (existingClient != null) {
-            ClientUtil.updateFieldIfNotNull(client.getName(), existingClient::setName);
-            ClientUtil.updateFieldIfNotNull(client.getGenre(), existingClient::setGenre);
-            ClientUtil.updateFieldIfNotNull(client.getAddress(), existingClient::setAddress);
-            ClientUtil.updateFieldIfNotNull(client.getPhone(), existingClient::setPhone);            
+            CustomUtils.updateFieldIfNotNull(client.getName(), existingClient::setName);
+            CustomUtils.updateFieldIfNotNull(client.getGenre(), existingClient::setGenre);
+            CustomUtils.updateFieldIfNotNull(client.getAddress(), existingClient::setAddress);
+            CustomUtils.updateFieldIfNotNull(client.getPhone(), existingClient::setPhone);            
 
-            ClientUtil.updateFieldIfNotNull(client.getPassword(), existingClient::setPassword);
+            CustomUtils.updateFieldIfNotNull(client.getPassword(), existingClient::setPassword);
 
             existingClient.setAge(client.getAge() != 0 ? client.getAge() : existingClient.getAge());            
             existingClient.setStatus(client.getStatus() && client.getStatus() != existingClient.getStatus() ? client.getStatus() : existingClient.getStatus());
