@@ -30,7 +30,7 @@ public class AccountService {
     }
 
     @Transactional
-    public Account createAccount(@Valid Account account) throws ValidationException{
+    public Account createAccount(@Valid Account account) throws ValidationException {
 
         Client client = clientRepository.getClientByIdentification(account.getClient().getIdentification());
         if (client == null) {

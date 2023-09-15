@@ -1,6 +1,7 @@
 package com.omar.omar.model;
 
-import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Date;
 
 import jakarta.persistence.*;
@@ -9,23 +10,24 @@ import jakarta.validation.constraints.Pattern;
 
 @Entity
 public class Moves {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long moveId;
 
-    @Temporal(TemporalType.DATE)
-    private Date date;
+    @Temporal(TemporalType.TIMESTAMP)
+    private LocalDateTime date;
 
-     @Pattern(regexp = "^(retiro|deposito)$", message = "El tipo de movimiento no debe ser 'retiro' o 'deposito'")
+    @Pattern(regexp = "^(Retiro|Deposito)$", message = "El tipo de movimiento no debe ser 'retiro' o 'deposito'")
     private String typeMove;
 
     @Min(value = 1, message = "El valor debe ser mayor o igual a 1")
     private double valueMove;
+
     private double balanceAvailable;
 
-    @JoinColumn(name="account_id", referencedColumnName="numberAccount")
-	@ManyToOne
+    @JoinColumn(name = "account_id", referencedColumnName = "numberAccount")
+    @ManyToOne
     private Account account;
 
     public Moves() {
@@ -35,8 +37,13 @@ public class Moves {
         return moveId;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
+    }
+
+    public void setDate(Date date) {
+        LocalDateTime localDateTime = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+        this.date = localDateTime;
     }
 
     public String getTypeMove() {
@@ -69,16 +76,6 @@ public class Moves {
 
     public void setAccount(Account account) {
         this.account = account;
-    }
-
-    @PrePersist
-    protected void onCreate() {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        try {
-            this.date = sdf.parse("10/2/2022");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
 }
