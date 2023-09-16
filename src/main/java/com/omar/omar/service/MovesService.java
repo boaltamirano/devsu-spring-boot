@@ -10,7 +10,6 @@ import org.springframework.validation.annotation.Validated;
 import com.omar.omar.Helpers.CustomUtils;
 import com.omar.omar.model.Account;
 import com.omar.omar.model.Moves;
-import com.omar.omar.model.dto.CustomAccountDTO;
 import com.omar.omar.model.dto.MovementDTO;
 import com.omar.omar.repository.AccountRepository;
 import com.omar.omar.repository.MoveRepository;
@@ -69,24 +68,6 @@ public class MovesService {
 
     public List<Moves> getMovementByAccount(Account account) {
         return (List<Moves>) movementRepository.getMovementByAccount(account);
-    }
-
-    public List<CustomAccountDTO> getAllMovementss(List<Moves> moves) {
-        // return (List<Moves>) movementRepository.findAll();
-        List<CustomAccountDTO> moveDTOList = new ArrayList<>();
-        for (Moves move : moves) {
-            CustomAccountDTO moveDTO = new CustomAccountDTO();
-            moveDTO.setCliente(move.getAccount().getClient().getName());
-            moveDTO.setNumeroCuenta(move.getAccount().getNumberAccount());
-            moveDTO.setTipo(move.getAccount().getTypeAccount());
-            moveDTO.setSaldoInicial(move.getAccount().getInitialBalance());
-            moveDTO.setEstado(move.getAccount().getStatus());
-            moveDTO.setMovimiento(move.getValueMove());
-            moveDTO.setSaldoDisponible(move.getBalanceAvailable());
-
-            moveDTOList.add(moveDTO);
-        }
-        return moveDTOList;
     }
 
     public Moves getMovementById(Long movementId) {

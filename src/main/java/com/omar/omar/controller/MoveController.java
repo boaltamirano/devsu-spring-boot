@@ -10,13 +10,12 @@ import org.springframework.web.bind.annotation.*;
 import com.omar.omar.Helpers.CustomUtils;
 import com.omar.omar.model.Account;
 import com.omar.omar.model.Moves;
-import com.omar.omar.model.dto.CustomAccountDTO;
 import com.omar.omar.service.MovesService;
 
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/movements")
+@RequestMapping("/api/movements")
 public class MoveController {
 
     @Autowired
@@ -25,13 +24,6 @@ public class MoveController {
     @PostMapping()
     public ResponseEntity<?> createMovement(@Valid @RequestBody Moves movement, BindingResult result) {
         return CustomUtils.createEntityResponse(movement, () -> movesService.createMoves(movement), result);
-    }
-
-    @GetMapping()
-    public ResponseEntity<List<CustomAccountDTO>> getAllMovements() {
-        List<Moves> movement = movesService.getAllMovements();
-        List<CustomAccountDTO> movements = movesService.getAllMovementss(movement);
-        return ResponseEntity.ok(movements);
     }
 
     @GetMapping("/{movementId}")

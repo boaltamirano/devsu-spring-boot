@@ -1,7 +1,6 @@
 package com.omar.omar.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -41,8 +40,9 @@ public class AccountService {
         return CustomUtils.accountReturn(accountRepository.save(account));
     }
 
-    public List<Account> getAllAccounts() {
-        return (List<Account>) accountRepository.findAll();
+    public List<AccountDTO> getAllAccounts() {
+        List<Account> getAccounts = accountRepository.findAll();
+        return CustomUtils.getAllAccountDTO(getAccounts);
     }
 
     public Account getAccountByNumberAccount(String numberAccount) {
@@ -51,29 +51,6 @@ public class AccountService {
             return account;
         }
         return null;
-    }
-
-    public Account getAccountWithMoviments(String numberAccount) {
-        Optional<Account> accountOptional = accountRepository.getAccountWithMoviments(numberAccount);
-        return accountOptional.orElse(null);
-    }
-
-    public Account updateAccount(String numberAccount, Account account) {
-
-        Account existingAccount = accountRepository.getAccountByNumberAccount(numberAccount);
-        if (existingAccount != null) {
-            CustomUtils.updateFieldIfNotNull(account.getTypeAccount(), existingAccount::setTypeAccount);
-            CustomUtils.updateFieldIfNotNull(account.getStatus(), existingAccount::setStatus);
-
-            existingAccount.setInitialBalance(account.getInitialBalance() != 0.0 ? account.getInitialBalance() : existingAccount.getInitialBalance());
-            return accountRepository.save(existingAccount);
-        }
-        return null;
-    }
-
-    @Transactional
-    public void deleteAccount(String numberAccount) {
-        accountRepository.deleteByNumberAccount(numberAccount);
     }
 
 }

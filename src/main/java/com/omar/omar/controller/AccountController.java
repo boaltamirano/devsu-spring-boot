@@ -8,12 +8,13 @@ import org.springframework.web.bind.annotation.*;
 
 import com.omar.omar.Helpers.CustomUtils;
 import com.omar.omar.model.Account;
+import com.omar.omar.model.dto.AccountDTO;
 import com.omar.omar.service.AccountService;
 
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/account")
+@RequestMapping("/api/account")
 public class AccountController {
 
     private final AccountService accountService;
@@ -28,8 +29,8 @@ public class AccountController {
     }
 
     @GetMapping()
-    public ResponseEntity<List<Account>> getAllAccounts() {
-        List<Account> accounts = accountService.getAllAccounts();
+    public ResponseEntity<List<AccountDTO>> getAllAccounts() {
+        List<AccountDTO> accounts = accountService.getAllAccounts();
         return ResponseEntity.ok(accounts);
     }
 
@@ -40,34 +41,6 @@ public class AccountController {
             return ResponseEntity.ok(account);
         }
         return ResponseEntity.notFound().build();
-    }
-
-    @GetMapping("/number/{numberAccount}")
-    public ResponseEntity<?> getAccountWithMovements(@PathVariable String numberAccount) {
-        Account account = accountService.getAccountWithMoviments(numberAccount);
-
-        if (account == null) {
-            return ResponseEntity.notFound().build();
-        }
-
-        // Puedes utilizar DTOs (objetos de transferencia de datos) para estructurar la respuesta si es necesario.
-
-        return ResponseEntity.ok(account);
-    }
-
-    @PutMapping("/{numberAccount}")
-    public ResponseEntity<Account> updateAccount(@PathVariable String numberAccount, @RequestBody Account account) {
-        Account updatedAccount = accountService.updateAccount(numberAccount, account);
-        if (updatedAccount != null) {
-            return ResponseEntity.ok(updatedAccount);
-        }
-        return ResponseEntity.notFound().build();
-    }
-
-    @DeleteMapping("/{numberAccount}")
-    public ResponseEntity<Void> deleteAccount(@PathVariable String numberAccount) {
-        accountService.deleteAccount(numberAccount);
-        return ResponseEntity.noContent().build();
     }
 
 }

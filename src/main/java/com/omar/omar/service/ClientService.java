@@ -1,7 +1,6 @@
 package com.omar.omar.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
 import com.omar.omar.Helpers.CustomUtils;
@@ -22,20 +21,17 @@ public class ClientService {
         return CustomUtils.clientReturn(clientResponse);
     }
 
-
     public List<Client> getAllClients() {
         return (List<Client>) clientRepository.findAll();
     }
 
-
-    public Client getClientByIdentification(String identification) {
+    public ClientDTO getClientByIdentification(String identification) {
         Client client = clientRepository.getClientByIdentification(identification);
         if (client != null) {
-            return client;
+            return CustomUtils.clientReturn(client);
         }
         return null;
     }
-
 
     public Client updateClient(String identification, Client client) {
 
@@ -44,22 +40,18 @@ public class ClientService {
             CustomUtils.updateFieldIfNotNull(client.getName(), existingClient::setName);
             CustomUtils.updateFieldIfNotNull(client.getGenre(), existingClient::setGenre);
             CustomUtils.updateFieldIfNotNull(client.getAddress(), existingClient::setAddress);
-            CustomUtils.updateFieldIfNotNull(client.getPhone(), existingClient::setPhone);            
+            CustomUtils.updateFieldIfNotNull(client.getPhone(), existingClient::setPhone);
 
             CustomUtils.updateFieldIfNotNull(client.getPassword(), existingClient::setPassword);
 
-            existingClient.setAge(client.getAge() != 0 ? client.getAge() : existingClient.getAge());            
-            existingClient.setStatus(client.getStatus() && client.getStatus() != existingClient.getStatus() ? client.getStatus() : existingClient.getStatus());
+            existingClient.setAge(client.getAge() != 0 ? client.getAge() : existingClient.getAge());
+            existingClient.setStatus(
+                    client.getStatus() && client.getStatus() != existingClient.getStatus() ? client.getStatus()
+                            : existingClient.getStatus());
 
             return clientRepository.save(existingClient);
         }
-        return null;
-    }
-
-
-    @Transactional
-    public void deleteClient(String identification) {
-        clientRepository.deleteByIdentification(identification);
+        return existingClient;
     }
 
 }

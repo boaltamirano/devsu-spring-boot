@@ -87,6 +87,16 @@ public class CustomUtils {
         return clientResponse;
     }
 
+    public static List<AccountDTO> getAllAccountDTO(List<Account> accounts) {
+
+        List<AccountDTO> accountList = new ArrayList<>();
+
+        for (Account account : accounts) {
+            accountList.add(accountReturn(account));
+        }
+        return accountList;
+    }
+
     public static AccountDTO accountReturn(Account account) {
 
         AccountDTO accountDTO = new AccountDTO();

@@ -1,78 +1,78 @@
 package com.omar.omar.model.dto;
 
 public class ReportDTO {
-    
-    private String fecha;
-    private String cliente;
-    private String numeroCuenta;
-    private String tipo;
-    private double saldoInicial;
-    private boolean estado;
-    private double movimiento;
-    private double saldoDisponible;
+
+    private String Fecha;
+    private String Cliente;
+    private String NumeroCuenta;
+    private String Tipo;
+    private double SaldoInicial;
+    private boolean Estado;
+    private double Movimiento;
+    private double SaldoDisponible;
 
     public String getFecha() {
-        return fecha;
+        return Fecha;
     }
 
     public void setFecha(String fecha) {
-        this.fecha = fecha;
+        Fecha = fecha;
     }
 
     public String getCliente() {
-        return cliente;
+        return Cliente;
     }
 
     public void setCliente(String cliente) {
-        this.cliente = cliente;
+        Cliente = cliente;
     }
 
     public String getNumeroCuenta() {
-        return numeroCuenta;
+        return NumeroCuenta;
     }
 
     public void setNumeroCuenta(String numeroCuenta) {
-        this.numeroCuenta = numeroCuenta;
+        NumeroCuenta = numeroCuenta;
     }
 
     public String getTipo() {
-        return tipo;
+        return Tipo;
     }
 
     public void setTipo(String tipo) {
-        this.tipo = tipo;
+        Tipo = tipo;
     }
 
     public double getSaldoInicial() {
-        return saldoInicial;
+        return SaldoInicial;
     }
 
     public void setSaldoInicial(double saldoInicial) {
-        this.saldoInicial = saldoInicial;
+        SaldoInicial = saldoInicial;
     }
 
     public boolean isEstado() {
-        return estado;
+        return Estado;
     }
 
     public void setEstado(boolean estado) {
-        this.estado = estado;
+        Estado = estado;
     }
 
     public double getMovimiento() {
-        return movimiento;
+        return Movimiento;
     }
 
     public void setMovimiento(double movimiento) {
-        this.movimiento = movimiento;
+        Movimiento = movimiento;
     }
 
     public double getSaldoDisponible() {
-        return saldoDisponible;
+        return SaldoDisponible;
     }
 
     public void setSaldoDisponible(double saldoDisponible) {
-        this.saldoDisponible = saldoDisponible;
+        SaldoDisponible = saldoDisponible;
     }
 
 }

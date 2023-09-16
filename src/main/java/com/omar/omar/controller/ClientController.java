@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.omar.omar.Helpers.CustomUtils;
 import com.omar.omar.model.Client;
+import com.omar.omar.model.dto.ClientDTO;
 import com.omar.omar.service.ClientService;
 
 import jakarta.validation.Valid;
@@ -33,8 +34,8 @@ public class ClientController {
     }
 
     @GetMapping("/{identification}")
-    public ResponseEntity<Client> getClientByIdentification(@PathVariable String identification) {
-        Client client = clientService.getClientByIdentification(identification);
+    public ResponseEntity<ClientDTO> getClientByIdentification(@PathVariable String identification) {
+        ClientDTO client = clientService.getClientByIdentification(identification);
         if (client != null) {
             return ResponseEntity.ok(client);
         }
@@ -51,9 +52,4 @@ public class ClientController {
         return ResponseEntity.notFound().build();
     }
 
-    @DeleteMapping("/{identification}")
-    public ResponseEntity<Void> deleteClient(@PathVariable String identification) {
-        clientService.deleteClient(identification);
-        return ResponseEntity.noContent().build();
-    }
 }
