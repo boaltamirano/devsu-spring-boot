@@ -45,10 +45,10 @@ public class AccountService {
         return CustomUtils.getAllAccountDTO(getAccounts);
     }
 
-    public Account getAccountByNumberAccount(String numberAccount) {
+    public AccountDTO getAccountByNumberAccount(String numberAccount) {
         Account account = accountRepository.getAccountByNumberAccount(numberAccount);
         if (account != null) {
-            return account;
+            return CustomUtils.accountReturn(account);
         }
         return null;
     }
