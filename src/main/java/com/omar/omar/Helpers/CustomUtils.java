@@ -15,9 +15,14 @@ import com.omar.omar.model.Client;
 import com.omar.omar.model.Moves;
 import com.omar.omar.model.dto.*;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import jakarta.validation.ValidationException;
 
 public class CustomUtils {
+
+    private static final Logger logger = LoggerFactory.getLogger(CustomUtils.class);
 
     public static <T> void updateFieldIfNotNull(T newValue, Consumer<T> updater) {
         if (newValue != null) {
@@ -36,15 +41,19 @@ public class CustomUtils {
             Map<String, Object> errorResponse = new HashMap<>();
             String errorMessage = result.getFieldError().getDefaultMessage();
             errorResponse.put("error", errorMessage);
+            logger.error(errorMessage);
             return ResponseEntity.badRequest().body(errorResponse);
         }
 
         try {
             T createdEntity = creationFunction.get();
+            logger.error("Se creo un registro de " + entity.toString());
             return ResponseEntity.status(HttpStatus.CREATED).body(createdEntity);
         } catch (ValidationException e) {
+            logger.error(e.getMessage());
             return buildErrorResponse(HttpStatus.BAD_REQUEST, e.getMessage());
         } catch (Exception e) {
+            logger.error(e.getMessage());
             return buildErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
         }
     }

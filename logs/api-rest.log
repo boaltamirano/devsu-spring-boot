@@ -1,0 +1,331 @@
+2023-09-15T21:10:24.663-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Starting OmarApplication using Java 17.0.6 with PID 35996 (C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar\target\classes started by Omar in C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar)
+2023-09-15T21:10:24.668-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-15T21:10:24.950-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-15T21:10:24.969-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2023-09-15T21:10:25.042-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-15T21:10:25.044-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-15T21:10:25.044-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-15T21:10:25.077-05:00  INFO 35996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-15T21:10:25.077-05:00  INFO 35996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 406 ms
+2023-09-15T21:10:25.123-05:00  INFO 35996 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-15T21:10:25.134-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:10:25.135-05:00  INFO 35996 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-15T21:10:25.136-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-09-15T21:10:25.182-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fb5844c
+2023-09-15T21:10:25.183-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-09-15T21:10:25.184-05:00  WARN 35996 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-15T21:10:25.204-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:10:25.287-05:00  INFO 35996 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-15T21:10:25.416-05:00  INFO 35996 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:10:25.537-05:00  WARN 35996 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-15T21:10:25.623-05:00  INFO 35996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-15T21:10:25.631-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-15T21:10:25.634-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Started OmarApplication in 1.027 seconds (process running for 318.433)
+2023-09-15T21:10:25.635-05:00  INFO 35996 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-15T21:12:07.174-05:00  INFO 35996 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-15T21:12:07.201-05:00  INFO 35996 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-15T21:12:07.237-05:00  INFO 35996 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:12:07.238-05:00  INFO 35996 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-09-15T21:12:07.277-05:00  INFO 35996 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-09-15T21:12:07.438-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Starting OmarApplication using Java 17.0.6 with PID 35996 (C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar\target\classes started by Omar in C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar)
+2023-09-15T21:12:07.439-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-15T21:12:07.869-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-15T21:12:07.892-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+2023-09-15T21:12:07.965-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-15T21:12:07.965-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-15T21:12:07.965-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-15T21:12:07.988-05:00  INFO 35996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-15T21:12:07.988-05:00  INFO 35996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 546 ms
+2023-09-15T21:12:08.032-05:00  INFO 35996 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-15T21:12:08.042-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:12:08.043-05:00  INFO 35996 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-15T21:12:08.045-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-09-15T21:12:08.076-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f119f5
+2023-09-15T21:12:08.077-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-09-15T21:12:08.078-05:00  WARN 35996 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-15T21:12:08.095-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:12:08.153-05:00  INFO 35996 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-15T21:12:08.287-05:00  INFO 35996 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:12:08.398-05:00  WARN 35996 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-15T21:12:08.464-05:00  INFO 35996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-15T21:12:08.471-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-15T21:12:08.474-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Started OmarApplication in 1.09 seconds (process running for 421.273)
+2023-09-15T21:12:08.475-05:00  INFO 35996 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-15T21:12:13.789-05:00  INFO 35996 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-15T21:12:13.789-05:00  INFO 35996 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-15T21:12:13.790-05:00  INFO 35996 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-15T21:12:13.796-05:00 ERROR 35996 --- [http-nio-8080-exec-2] com.omar.omar.Helpers.CustomUtils        : Text '20223-09-15T23:59:59' could not be parsed at index 0
+2023-09-15T21:12:13.799-05:00  WARN 35996 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.time.format.DateTimeParseException: Text '20223-09-15T23:59:59' could not be parsed at index 0]
+2023-09-15T21:13:05.098-05:00  INFO 35996 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-15T21:13:05.159-05:00  INFO 35996 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-15T21:13:05.160-05:00  INFO 35996 --- [Thread-19] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-15T21:13:05.166-05:00  INFO 35996 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:13:05.167-05:00  INFO 35996 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-09-15T21:13:05.397-05:00  INFO 35996 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2023-09-15T21:13:05.513-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Starting OmarApplication using Java 17.0.6 with PID 35996 (C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar\target\classes started by Omar in C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar)
+2023-09-15T21:13:05.514-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-15T21:13:05.908-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-15T21:13:05.950-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.
+2023-09-15T21:13:06.056-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-15T21:13:06.057-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-15T21:13:06.057-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-15T21:13:06.082-05:00  INFO 35996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-15T21:13:06.084-05:00  INFO 35996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 567 ms
+2023-09-15T21:13:06.122-05:00  INFO 35996 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-15T21:13:06.135-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:13:06.136-05:00  INFO 35996 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-15T21:13:06.138-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-09-15T21:13:06.174-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57596e65
+2023-09-15T21:13:06.174-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-09-15T21:13:06.175-05:00  WARN 35996 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-15T21:13:06.199-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:13:06.259-05:00  INFO 35996 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-15T21:13:06.380-05:00  INFO 35996 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:13:06.485-05:00  WARN 35996 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-15T21:13:06.571-05:00  INFO 35996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-15T21:13:06.621-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-15T21:13:06.645-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Started OmarApplication in 1.159 seconds (process running for 479.444)
+2023-09-15T21:13:06.648-05:00  INFO 35996 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-15T21:13:08.263-05:00  INFO 35996 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-15T21:13:08.263-05:00  INFO 35996 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-15T21:13:08.264-05:00  INFO 35996 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-15T21:13:08.266-05:00 ERROR 35996 --- [http-nio-8080-exec-3] com.omar.omar.Helpers.CustomUtils        : Text '20223-09-15T23:59:59' could not be parsed at index 0
+2023-09-15T21:13:08.268-05:00  WARN 35996 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.time.format.DateTimeParseException: Text '20223-09-15T23:59:59' could not be parsed at index 0]
+2023-09-15T21:14:03.591-05:00  INFO 35996 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-15T21:14:03.617-05:00  INFO 35996 --- [Thread-23] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-15T21:14:03.617-05:00  INFO 35996 --- [Thread-23] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-15T21:14:03.624-05:00  INFO 35996 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:14:03.625-05:00  INFO 35996 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-09-15T21:14:03.646-05:00  INFO 35996 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2023-09-15T21:14:03.826-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Starting OmarApplication using Java 17.0.6 with PID 35996 (C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar\target\classes started by Omar in C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar)
+2023-09-15T21:14:03.828-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-15T21:14:04.118-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-15T21:14:04.136-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2023-09-15T21:14:04.219-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-15T21:14:04.221-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-15T21:14:04.221-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-15T21:14:04.246-05:00  INFO 35996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-15T21:14:04.247-05:00  INFO 35996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 409 ms
+2023-09-15T21:14:04.279-05:00  INFO 35996 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-15T21:14:04.284-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:14:04.285-05:00  INFO 35996 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-15T21:14:04.286-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2023-09-15T21:14:04.312-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7510d503
+2023-09-15T21:14:04.312-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2023-09-15T21:14:04.313-05:00  WARN 35996 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-15T21:14:04.333-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:14:04.387-05:00  INFO 35996 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-15T21:14:04.505-05:00  INFO 35996 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:14:04.620-05:00  WARN 35996 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-15T21:14:04.686-05:00  INFO 35996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-15T21:14:04.696-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-15T21:14:04.698-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Started OmarApplication in 0.96 seconds (process running for 537.496)
+2023-09-15T21:14:04.699-05:00  INFO 35996 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-15T21:14:24.513-05:00  INFO 35996 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-15T21:14:24.553-05:00  INFO 35996 --- [Thread-27] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-15T21:14:24.560-05:00  INFO 35996 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:14:24.561-05:00  INFO 35996 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2023-09-15T21:14:24.606-05:00  INFO 35996 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2023-09-15T21:14:24.898-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Starting OmarApplication using Java 17.0.6 with PID 35996 (C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar\target\classes started by Omar in C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar)
+2023-09-15T21:14:24.899-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-15T21:14:25.154-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-15T21:14:25.170-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+2023-09-15T21:14:25.254-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-15T21:14:25.255-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-15T21:14:25.256-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-15T21:14:25.280-05:00  INFO 35996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-15T21:14:25.281-05:00  INFO 35996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 380 ms
+2023-09-15T21:14:25.309-05:00  INFO 35996 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-15T21:14:25.317-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:14:25.317-05:00  INFO 35996 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-15T21:14:25.320-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2023-09-15T21:14:25.341-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e7e3aaa
+2023-09-15T21:14:25.341-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2023-09-15T21:14:25.342-05:00  WARN 35996 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-15T21:14:25.358-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:14:25.407-05:00  INFO 35996 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-15T21:14:25.513-05:00  INFO 35996 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:14:25.619-05:00  WARN 35996 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-15T21:14:25.683-05:00  INFO 35996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-15T21:14:25.695-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-15T21:14:25.698-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Started OmarApplication in 0.989 seconds (process running for 558.496)
+2023-09-15T21:14:25.699-05:00  INFO 35996 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-15T21:17:04.464-05:00  INFO 35996 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-15T21:17:04.478-05:00  INFO 35996 --- [Thread-31] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-15T21:17:04.481-05:00  INFO 35996 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:17:04.482-05:00  INFO 35996 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2023-09-15T21:17:04.538-05:00  INFO 35996 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2023-09-15T21:17:04.612-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Starting OmarApplication using Java 17.0.6 with PID 35996 (C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar\target\classes started by Omar in C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar)
+2023-09-15T21:17:04.612-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-15T21:17:04.960-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-15T21:17:04.971-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+2023-09-15T21:17:05.029-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-15T21:17:05.030-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-15T21:17:05.030-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-15T21:17:05.049-05:00  INFO 35996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-15T21:17:05.050-05:00  INFO 35996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 422 ms
+2023-09-15T21:17:05.074-05:00  INFO 35996 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-15T21:17:05.080-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:17:05.080-05:00  INFO 35996 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-15T21:17:05.081-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2023-09-15T21:17:05.103-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b715427
+2023-09-15T21:17:05.103-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2023-09-15T21:17:05.104-05:00  WARN 35996 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-15T21:17:05.117-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:17:05.159-05:00  INFO 35996 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-15T21:17:05.298-05:00  INFO 35996 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:17:05.441-05:00  WARN 35996 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-15T21:17:05.492-05:00  INFO 35996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-15T21:17:05.501-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-15T21:17:05.504-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Started OmarApplication in 0.902 seconds (process running for 718.303)
+2023-09-15T21:17:05.505-05:00  INFO 35996 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-15T21:17:08.143-05:00  INFO 35996 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-15T21:17:08.143-05:00  INFO 35996 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-15T21:17:08.144-05:00  INFO 35996 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-15T21:17:08.145-05:00 ERROR 35996 --- [http-nio-8080-exec-2] c.o.omar.controller.ReportsController    : Agenerado reportes de movimientos de una cuenta
+2023-09-15T21:17:43.703-05:00  INFO 35996 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-15T21:17:43.719-05:00  INFO 35996 --- [Thread-35] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-15T21:17:43.719-05:00  INFO 35996 --- [Thread-35] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-15T21:17:43.725-05:00  INFO 35996 --- [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:17:43.726-05:00  INFO 35996 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2023-09-15T21:17:43.741-05:00  INFO 35996 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2023-09-15T21:17:43.817-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Starting OmarApplication using Java 17.0.6 with PID 35996 (C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar\target\classes started by Omar in C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar)
+2023-09-15T21:17:43.818-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-15T21:17:44.087-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-15T21:17:44.126-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2023-09-15T21:17:44.241-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-15T21:17:44.243-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-15T21:17:44.250-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-15T21:17:44.327-05:00  INFO 35996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-15T21:17:44.344-05:00  INFO 35996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 525 ms
+2023-09-15T21:17:44.371-05:00  INFO 35996 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-15T21:17:44.380-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:17:44.381-05:00  INFO 35996 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-15T21:17:44.381-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2023-09-15T21:17:44.432-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b8a3bfd
+2023-09-15T21:17:44.433-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2023-09-15T21:17:44.434-05:00  WARN 35996 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-15T21:17:44.454-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:17:44.621-05:00  INFO 35996 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-15T21:17:44.967-05:00  INFO 35996 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:17:45.070-05:00  WARN 35996 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-15T21:17:45.130-05:00  INFO 35996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-15T21:17:45.142-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-15T21:17:45.144-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Started OmarApplication in 1.348 seconds (process running for 757.943)
+2023-09-15T21:17:45.146-05:00  INFO 35996 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-15T21:18:18.259-05:00  INFO 35996 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-15T21:18:18.281-05:00  INFO 35996 --- [Thread-39] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-15T21:18:18.298-05:00  INFO 35996 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:18:18.300-05:00  INFO 35996 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2023-09-15T21:18:18.503-05:00  INFO 35996 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2023-09-15T21:18:18.620-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Starting OmarApplication using Java 17.0.6 with PID 35996 (C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar\target\classes started by Omar in C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar)
+2023-09-15T21:18:18.620-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-15T21:18:18.759-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-15T21:18:18.775-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+2023-09-15T21:18:18.835-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-15T21:18:18.836-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-15T21:18:18.836-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-15T21:18:18.856-05:00  INFO 35996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-15T21:18:18.856-05:00  INFO 35996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 233 ms
+2023-09-15T21:18:18.872-05:00  INFO 35996 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-15T21:18:18.877-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:18:18.877-05:00  INFO 35996 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-15T21:18:18.878-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2023-09-15T21:18:18.942-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ca0587a
+2023-09-15T21:18:18.942-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2023-09-15T21:18:18.943-05:00  WARN 35996 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-15T21:18:18.970-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:18:19.065-05:00  INFO 35996 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-15T21:18:19.337-05:00  INFO 35996 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:18:19.548-05:00  WARN 35996 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-15T21:18:19.609-05:00  INFO 35996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-15T21:18:19.617-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-15T21:18:19.620-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Started OmarApplication in 1.029 seconds (process running for 792.418)
+2023-09-15T21:18:19.621-05:00  INFO 35996 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-15T21:19:43.013-05:00  INFO 35996 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-15T21:19:43.055-05:00  INFO 35996 --- [Thread-43] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-15T21:19:43.101-05:00  INFO 35996 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:19:43.113-05:00  INFO 35996 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2023-09-15T21:19:43.210-05:00  INFO 35996 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2023-09-15T21:19:43.296-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Starting OmarApplication using Java 17.0.6 with PID 35996 (C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar\target\classes started by Omar in C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar)
+2023-09-15T21:19:43.297-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-15T21:19:43.432-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-15T21:19:43.449-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2023-09-15T21:19:43.523-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-15T21:19:43.524-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-15T21:19:43.525-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-15T21:19:43.561-05:00  INFO 35996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-15T21:19:43.561-05:00  INFO 35996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 264 ms
+2023-09-15T21:19:43.591-05:00  INFO 35996 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-15T21:19:43.600-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:19:43.600-05:00  INFO 35996 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-15T21:19:43.602-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2023-09-15T21:19:43.627-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b2f74a3
+2023-09-15T21:19:43.627-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2023-09-15T21:19:43.628-05:00  WARN 35996 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-15T21:19:43.642-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:19:43.692-05:00  INFO 35996 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-15T21:19:43.836-05:00  INFO 35996 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:19:43.955-05:00  WARN 35996 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-15T21:19:44.081-05:00  INFO 35996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-15T21:19:44.120-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-15T21:19:44.138-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Started OmarApplication in 0.861 seconds (process running for 876.936)
+2023-09-15T21:19:44.146-05:00  INFO 35996 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-15T21:20:49.917-05:00  INFO 35996 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-15T21:20:49.998-05:00  INFO 35996 --- [Thread-47] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-15T21:20:50.001-05:00  INFO 35996 --- [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:20:50.002-05:00  INFO 35996 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2023-09-15T21:20:50.027-05:00  INFO 35996 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2023-09-15T21:20:50.178-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Starting OmarApplication using Java 17.0.6 with PID 35996 (C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar\target\classes started by Omar in C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar)
+2023-09-15T21:20:50.179-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-15T21:20:50.404-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-15T21:20:50.430-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+2023-09-15T21:20:50.586-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-15T21:20:50.586-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-15T21:20:50.606-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-15T21:20:50.719-05:00  INFO 35996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-15T21:20:50.725-05:00  INFO 35996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 535 ms
+2023-09-15T21:20:50.795-05:00  INFO 35996 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-15T21:20:50.804-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:20:50.817-05:00  INFO 35996 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-15T21:20:50.824-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2023-09-15T21:20:50.949-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31bad779
+2023-09-15T21:20:50.950-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2023-09-15T21:20:50.951-05:00  WARN 35996 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-15T21:20:50.968-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:20:51.022-05:00  INFO 35996 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-15T21:20:51.136-05:00  INFO 35996 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:20:51.264-05:00  WARN 35996 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-15T21:20:51.317-05:00  INFO 35996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-15T21:20:51.323-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-15T21:20:51.326-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Started OmarApplication in 1.186 seconds (process running for 944.126)
+2023-09-15T21:20:51.327-05:00  INFO 35996 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-15T21:21:27.559-05:00  INFO 35996 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-15T21:21:27.559-05:00  INFO 35996 --- [Thread-51] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-15T21:21:27.579-05:00  INFO 35996 --- [Thread-51] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:21:27.579-05:00  INFO 35996 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2023-09-15T21:21:27.637-05:00  INFO 35996 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2023-09-15T21:21:27.849-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Starting OmarApplication using Java 17.0.6 with PID 35996 (C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar\target\classes started by Omar in C:\Users\omara\Documents\Carpeta Personal\Pruebas\Devsu\omar)
+2023-09-15T21:21:27.849-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-15T21:21:27.981-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-15T21:21:28.013-05:00  INFO 35996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 3 JPA repository interfaces.
+2023-09-15T21:21:28.218-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-15T21:21:28.219-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-15T21:21:28.220-05:00  INFO 35996 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-15T21:21:28.280-05:00  INFO 35996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-15T21:21:28.284-05:00  INFO 35996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 434 ms
+2023-09-15T21:21:28.392-05:00  INFO 35996 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-15T21:21:28.399-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:21:28.403-05:00  INFO 35996 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-15T21:21:28.404-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2023-09-15T21:21:28.426-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6be35dc0
+2023-09-15T21:21:28.426-05:00  INFO 35996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2023-09-15T21:21:28.427-05:00  WARN 35996 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-15T21:21:28.443-05:00  INFO 35996 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-15T21:21:28.488-05:00  INFO 35996 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-15T21:21:28.599-05:00  INFO 35996 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15T21:21:28.700-05:00  WARN 35996 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-15T21:21:28.759-05:00  INFO 35996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-15T21:21:28.767-05:00  INFO 35996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-15T21:21:28.771-05:00  INFO 35996 --- [restartedMain] com.omar.omar.OmarApplication            : Started OmarApplication in 0.979 seconds (process running for 981.569)
+2023-09-15T21:21:28.773-05:00  INFO 35996 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
