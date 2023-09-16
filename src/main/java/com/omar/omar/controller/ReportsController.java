@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import com.omar.omar.model.dto.ReportDTO;
 import com.omar.omar.service.ReportsService;
 
+import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/api/reports")
@@ -22,11 +24,10 @@ public class ReportsController {
     @GetMapping()
     public List<ReportDTO> getMovesByAccountAndDate(
         @RequestParam String accountId,
-        @RequestParam
-        String startDate,
-        @RequestParam
-        String endDate) 
-    {
+        @Valid @RequestParam String startDate,
+        @Valid @RequestParam String endDate
+    ) {
+        
         LocalDateTime startDateTime = LocalDateTime.parse(startDate+"T00:00:00");
         LocalDateTime endDateTime = LocalDateTime.parse(endDate+"T23:59:59");
 

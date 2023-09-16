@@ -7,11 +7,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
 import com.omar.omar.Helpers.CustomUtils;
-import com.omar.omar.model.Account;
-import com.omar.omar.model.Moves;
 import com.omar.omar.model.dto.ReportDTO;
-import com.omar.omar.repository.AccountRepository;
-import com.omar.omar.repository.MoveRepository;
+import com.omar.omar.model.*;
+import com.omar.omar.repository.*;
 
 import jakarta.persistence.EntityNotFoundException;
 

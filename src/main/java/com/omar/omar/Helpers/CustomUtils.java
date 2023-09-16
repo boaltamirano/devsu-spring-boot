@@ -31,8 +31,7 @@ public class CustomUtils {
         return ResponseEntity.status(status).body(errorResponse);
     }
 
-    public static <T> ResponseEntity<?> createEntityResponse(T entity, Supplier<T> creationFunction,
-            BindingResult result) {
+    public static <T> ResponseEntity<?> createEntityResponse(T entity, Supplier<T> creationFunction, BindingResult result) {
         if (result.hasErrors()) {
             Map<String, Object> errorResponse = new HashMap<>();
             String errorMessage = result.getFieldError().getDefaultMessage();
