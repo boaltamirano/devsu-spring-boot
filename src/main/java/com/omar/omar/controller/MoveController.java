@@ -1,14 +1,11 @@
 package com.omar.omar.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import com.omar.omar.Helpers.CustomUtils;
-import com.omar.omar.model.Account;
 import com.omar.omar.model.Moves;
 import com.omar.omar.service.MovesService;
 
@@ -34,19 +31,5 @@ public class MoveController {
         }
         return ResponseEntity.notFound().build();
     }
-
-    @GetMapping("/account/{account}")
-    public ResponseEntity<List<Moves>> getMovementByAccount(@PathVariable Account account) {
-        try {
-            List<Moves> movement = movesService.getMovementByAccount(account);
-            if (movement != null) {
-                return ResponseEntity.ok(movement);
-            }
-            return ResponseEntity.notFound().build();
-        } catch (Exception e) {
-            return ResponseEntity.notFound().build();
-        }
-    }
-
 
 }

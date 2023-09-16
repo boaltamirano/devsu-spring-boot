@@ -12,8 +12,6 @@ import com.omar.omar.model.Moves;
 
 public interface MoveRepository extends JpaRepository<Moves, Long> {
 
-    List<Moves> getMovementByAccount(Account account);
-
     @Query("SELECT SUM(m.valueMove) FROM Moves m WHERE m.account = :account AND DATE(m.date) = DATE(:currentDate) AND m.typeMove = 'Retiro'")
     Long getCountOfMovesForTodayByAccount(@Param("account") Account account, @Param("currentDate") LocalDateTime currentDate);
 

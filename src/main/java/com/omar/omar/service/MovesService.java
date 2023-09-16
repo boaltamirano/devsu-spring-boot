@@ -1,7 +1,6 @@
 package com.omar.omar.service;
 
 import java.time.LocalDateTime;
-import java.util.*;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -60,14 +59,6 @@ public class MovesService {
         } catch (Exception e) {
             throw new EntityNotFoundException(e.getMessage());
         }
-    }
-
-    public List<Moves> getAllMovements() {
-        return (List<Moves>) movementRepository.findAll();
-    }
-
-    public List<Moves> getMovementByAccount(Account account) {
-        return (List<Moves>) movementRepository.getMovementByAccount(account);
     }
 
     public Moves getMovementById(Long movementId) {
