@@ -44,6 +44,10 @@ public class Account {
         return numberAccount;
     }
 
+    public void setNumberAccount(String numberAccount) {
+        this.numberAccount = numberAccount;
+    }
+
     public String getTypeAccount() {
         return typeAccount;
     }

@@ -21,6 +21,10 @@ public class ClientController {
     @Autowired
     private ClientService clientService;
 
+    public ClientController(ClientService clientService) {
+        this.clientService = clientService;
+    }
+
     @PostMapping()
     public ResponseEntity<?> createClient(@Valid @RequestBody Client client, BindingResult result) {
 

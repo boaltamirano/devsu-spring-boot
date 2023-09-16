@@ -8,6 +8,12 @@ public class ClientDTO {
     private String contraseña;
     private boolean estado;
 
+    
+
+    public ClientDTO() {
+        super();
+    }
+
     public String getNombres() {
         return nombres;
     }
