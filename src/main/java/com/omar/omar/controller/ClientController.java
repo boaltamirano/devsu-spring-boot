@@ -1,10 +1,13 @@
 package com.omar.omar.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +20,7 @@ import com.omar.omar.service.ClientService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/client")
+@RequestMapping("/api/client")
 public class ClientController {
 
     @Autowired
@@ -31,8 +34,17 @@ public class ClientController {
 
     @PostMapping()
     public ResponseEntity<?> createClient(@Valid @RequestBody Client client, BindingResult result) {
+        ClientDTO clientDTO = clientService.createClient(client);
+
+        if (clientDTO == null) {
+            logger.info("El usuario con id " + client.getIdentification() + " ya existe");
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "El usuario con id " + client.getIdentification() + " ya existe");
+            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        }
         logger.info("Se creo un cliente correctamente");
-        return CustomUtils.createEntityResponse(client, () -> clientService.createClient(client), result);
+        return CustomUtils.createEntityResponse(client, () -> clientDTO, result);
+
     }
 
     @GetMapping()

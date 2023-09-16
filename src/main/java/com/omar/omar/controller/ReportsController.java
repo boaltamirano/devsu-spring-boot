@@ -5,13 +5,13 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.omar.omar.model.dto.ReportDTO;
 import com.omar.omar.service.ReportsService;
 
 import jakarta.validation.Valid;
-
 
 @RestController
 @RequestMapping("/api/reports")
@@ -27,15 +27,27 @@ public class ReportsController {
 
     @GetMapping()
     public List<ReportDTO> getMovesByAccountAndDate(
-        @RequestParam String accountId,
-        @Valid @RequestParam String startDate,
-        @Valid @RequestParam String endDate
-    ) {
-        
-        LocalDateTime startDateTime = LocalDateTime.parse(startDate+"T00:00:00");
-        LocalDateTime endDateTime = LocalDateTime.parse(endDate+"T23:59:59");
+            @RequestParam String accountId,
+            @Valid @RequestParam String startDate,
+            @Valid @RequestParam String endDate) {
+
+        LocalDateTime startDateTime = LocalDateTime.parse(startDate + "T00:00:00");
+        LocalDateTime endDateTime = LocalDateTime.parse(endDate + "T23:59:59");
         logger.info("getMovesByAccountAndDate: Se genero reportes de movimientos de una cuenta");
         return reportsService.getMovesByAccountAndDate(accountId, startDateTime, endDateTime);
+    }
+
+    @GetMapping("/client/{clientId}")
+    public ResponseEntity<List<ReportDTO>> getMovesByClientAndDateRange(
+            @PathVariable String clientId,
+            @Valid @RequestParam String startDate,
+            @Valid @RequestParam String endDate
+            ) {
+        LocalDateTime startDateTime = LocalDateTime.parse(startDate+"T00:00:00");
+        LocalDateTime endDateTime = LocalDateTime.parse(endDate+"T23:59:59");
+        List<ReportDTO> moves = reportsService.getMovesByClientAndDateRange(clientId, startDateTime, endDateTime);
+        logger.info("getMovesByAccountAndDate: Se genero reportes de movimientos de una cuenta");
+        return ResponseEntity.ok(moves);
     }
 
 }

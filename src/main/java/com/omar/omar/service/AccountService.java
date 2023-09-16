@@ -36,6 +36,9 @@ public class AccountService {
         if (client == null) {
             throw new EntityNotFoundException("No se encontró el cliente con la identificación proporcionada.");
         }
+        if (accountRepository.getAccountByNumberAccount(account.getNumberAccount()) != null) {
+            return null;
+        }
         account.setClient(client);
         return CustomUtils.accountReturn(accountRepository.save(account));
     }

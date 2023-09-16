@@ -17,6 +17,9 @@ public class ClientService {
     private ClientRepository clientRepository;
 
     public ClientDTO createClient(Client client) {
+        if (clientRepository.getClientByIdentification(client.getIdentification()) != null) {
+            return null;
+        }
         Client clientResponse = clientRepository.save(client);
         return CustomUtils.clientReturn(clientResponse);
     }

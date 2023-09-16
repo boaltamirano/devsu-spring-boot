@@ -1,6 +1,7 @@
 package com.omar.omar.service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -8,9 +9,11 @@ import org.springframework.validation.annotation.Validated;
 
 import com.omar.omar.Helpers.CustomUtils;
 import com.omar.omar.model.Account;
+import com.omar.omar.model.Client;
 import com.omar.omar.model.Moves;
 import com.omar.omar.model.dto.MovementDTO;
 import com.omar.omar.repository.AccountRepository;
+import com.omar.omar.repository.ClientRepository;
 import com.omar.omar.repository.MoveRepository;
 
 import jakarta.persistence.EntityNotFoundException;
@@ -23,10 +26,13 @@ public class MovesService {
 
     private final MoveRepository movementRepository;
     private final AccountRepository accountRepository;
+    private final ClientRepository clientRepository;
 
-    public MovesService(MoveRepository moveRepository, AccountRepository accountRepository) {
+    public MovesService(MoveRepository moveRepository, AccountRepository accountRepository,
+            ClientRepository clientRepository) {
         this.movementRepository = moveRepository;
         this.accountRepository = accountRepository;
+        this.clientRepository = clientRepository;
     }
 
     @Transactional
@@ -69,6 +75,11 @@ public class MovesService {
         return null;
     }
 
+    public List<Moves> getMovesByClientAndDateRange(String identification, LocalDateTime startDate, LocalDateTime endDate) {
+        Client client = clientRepository.getClientByIdentification(identification);
+        return movementRepository.findAllByAccount_ClientAndDateBetween(client, startDate, endDate);
+    }
+
     /************** Helper functions **************/
     private void validateWithdrawal(Moves movement, Account account) throws ValidationException {
         double totalValueToday = getTotalValueMoveForTodayByAccount(account);
@@ -86,7 +97,8 @@ public class MovesService {
 
     public Long getTotalValueMoveForTodayByAccount(Account account) {
         LocalDateTime currentDate = LocalDateTime.now();
-        return movementRepository.getCountOfMovesForTodayByAccount(account, currentDate);
+        Long totalToday = movementRepository.getCountOfMovesForTodayByAccount(account, currentDate);
+        return totalToday == null ? 0 : totalToday;
     }
 
     private void validateDeposit(Moves movement, Account account) {

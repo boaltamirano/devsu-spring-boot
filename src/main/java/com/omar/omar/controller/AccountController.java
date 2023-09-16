@@ -1,9 +1,12 @@
 package com.omar.omar.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -28,8 +31,16 @@ public class AccountController {
 
     @PostMapping()
     public ResponseEntity<?> createAccount(@Valid @RequestBody Account account, BindingResult result) {
+        AccountDTO accountDTO = accountService.createAccount(account);
+
+        if (accountDTO == null) {
+            logger.info("Ya existe una cuenta con el numero " + account.getNumberAccount());
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "Ya existe una cuenta con el numero " + account.getNumberAccount());
+            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        }
         logger.info("Se creo una cuenta correctamente");
-        return CustomUtils.createEntityResponse(account, () -> accountService.createAccount(account), result);
+        return CustomUtils.createEntityResponse(account, () -> accountDTO, result);
     }
 
     @GetMapping()

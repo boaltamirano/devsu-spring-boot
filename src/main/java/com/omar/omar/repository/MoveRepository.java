@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import com.omar.omar.model.Account;
+import com.omar.omar.model.Client;
 import com.omar.omar.model.Moves;
 
 public interface MoveRepository extends JpaRepository<Moves, Long> {
@@ -22,4 +23,6 @@ public interface MoveRepository extends JpaRepository<Moves, Long> {
     Double findTopByAccountOrderByDateDesc(Account account);
 
     List<Moves> findByAccountAndDateBetween(Account account, LocalDateTime startDate, LocalDateTime endDate);
+
+    List<Moves> findAllByAccount_ClientAndDateBetween(Client client, LocalDateTime startDate, LocalDateTime endDate);
 }
