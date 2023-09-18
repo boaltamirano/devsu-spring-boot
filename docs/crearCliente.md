@@ -1,21 +1,21 @@
 ## Crear Cliente
 
 ```sh
-    curl -X POST 'http://13.57.234.164:8080/api/client' \
+    curl -X POST '{{host}}/api/client' \
          -H 'Content-Type: application/json' \
          --data-raw '{{request_payload}}'
 ```
 
 ### Parameters
 
-| Campo | Tipo                  | Descripcion                                       |
+| Campo | Tipo                  | Descripción                                       |
 |-------|-----------------------|---------------------------------------------------|
-| identification  | `string` **required** | Idientificacion del usuario          |
-| name | `string` **required** | Nombre del usaurio |
-| address  | `string` **optional** | Direccion del usaurio  |
-| age  | `string` **required** | Edad del usaurio  |
-| phone  | `string` **optional** | Telefono del usuario  |
-| password  | `string` **required** | Contra del usuario  |
+| identification  | `string` **required** | Identificación del usuario          |
+| name | `string` **required** | Nombre del usuario |
+| address  | `string` **optional** | Dirección del usuario  |
+| age  | `string` **required** | Edad del usuario  |
+| phone  | `string` **optional** | Teléfono del usuario  |
+| password  | `string` **required** | Contraseña del usuario  |
 | status  | `string` **optional** | Estado del usuario  |
 
 

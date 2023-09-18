@@ -1,14 +1,14 @@
-## Obtener cuenta por numero
+## Obtener cuenta por número
 
 ```sh
-    curl -X GET 'http://13.57.234.164:8080/api/account/{numberAccount}' 
+    curl -X GET '{{host}}/api/account/{numberAccount}' 
 ```
 
-### Query Parameters
+### Parameters
 
-| Field  | Type                  | Description                                               |
+| Campo  | Tipo                  | Descripción                                               |
 |--------|-----------------------|-----------------------------------------------------------|
-| numberAccount | `string` **required** | Numero de la cuenta|
+| numberAccount | `string` **required** | Número de la cuenta|
 
 ### Response
 

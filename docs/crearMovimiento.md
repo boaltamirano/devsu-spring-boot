@@ -1,18 +1,18 @@
 ## Crear movimiento
 
 ```sh
-    curl -X POST 'http://13.57.234.164:8080/api/movements' \
+    curl -X POST '{{host}}api/movements' \
          -H 'Content-Type: application/json' \
          --data-raw '{{request_payload}}'
 ```
 
 ### Parameters
 
-| Campo | Tipo                  | Descripcion                                       |
+| Campo | Tipo                  | Descripción                                       |
 |-------|-----------------------|---------------------------------------------------|
 | typeMove  | `string` **required** | Tipo de movimiento que se va a realizar          |
 | valueMove | `string` **required** | Valor del movimiento |
-| account  | `string` **required** | Numero de cuenta  |
+| account  | `string` **required** | Número de cuenta  |
 
 
 ### Request Payload

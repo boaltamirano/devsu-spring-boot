@@ -1,4 +1,36 @@
-## API Documentacion
+# Test API Devsu
+
+## Dependencias
+
+- MySQL, 
+- Spring boot,
+- Maven
+- Java 17
+- Mockito
+- JUnit
+
+## Verificar conexión a la base de datos 
+> application.properties
+
+## Generar .jar
+
+```
+./mvnw clean package
+```
+
+## Levantar contenedores
+
+```
+docker compose up --build -d
+```
+
+
+## Detener contenedores
+```
+docker compose down
+```
+
+## API Documentación
 
 ### Cliente
 
@@ -13,7 +45,7 @@
 
 - #### [Crear cuenta](docs/crearCuenta.md)
 
-- #### [Obtener cuenta por numero](docs/obtenerCuentaPorNumero.md)
+- #### [Obtener cuenta por número](docs/obtenerCuentaPorNumero.md)
 
 
 ### Movimientos

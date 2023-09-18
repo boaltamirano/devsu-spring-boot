@@ -1,14 +1,14 @@
-## Obtener clientes por identificacion
+## Obtener clientes por identificación
 
 ```sh
-    curl -X GET 'http://13.57.234.164:8080/api/client/{identificacion}' 
+    curl -X GET '{{host}}/api/client/{identificacion}' 
 ```
 
-### Query Parameters
+### Parameters
 
-| Field  | Type                  | Description                                               |
+| Campo  | Tipo                  | Descripción                                               |
 |--------|-----------------------|-----------------------------------------------------------|
-| identificacion | `string` **required** | ID del cliente |
+| identification | `string` **required** | ID del cliente |
 
 ### Response
 

@@ -1,7 +1,7 @@
 ## Generar reporte de movimientos de un cliente
 
 ```sh
-curl -X GET 'http://13.57.234.164:8080/api/reports/client/{identification}?startDate=2023-09-01&endDate=2023-09-16' 
+curl -X GET '{{host}}/api/reports/client/{identification}?startDate=2023-09-01&endDate=2023-09-16' 
 ```
 
 ### Response

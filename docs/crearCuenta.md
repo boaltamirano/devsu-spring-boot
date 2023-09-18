@@ -1,16 +1,16 @@
 ## Crear cuenta
 
 ```sh
-    curl -X POST 'http://13.57.234.164:8080/api/account' \
+    curl -X POST '{{host}}/api/account' \
          -H 'Content-Type: application/json' \
          --data-raw '{{request_payload}}'
 ```
 
 ### Parameters
 
-| Campo | Tipo                  | Descripcion                                       |
+| Campo | Tipo                  | Descripción                                       |
 |-------|-----------------------|---------------------------------------------------|
-| numberAccount  | `string` **required** | Numero de cuenta          |
+| numberAccount  | `string` **required** | Número de cuenta          |
 | typeAccount | `string` **required** | Tipo de cuenta |
 | initialBalance  | `string` **optional** | Saldo inicial de la cuenta  |
 | status  | `string` **required** | Estado de la cuenta  |

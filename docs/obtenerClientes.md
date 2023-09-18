@@ -1,7 +1,7 @@
 ## Obtener todos los clientes
 
 ```sh
-curl -X GET 'http://13.57.234.164:8080/api/client' 
+curl -X GET '{{host}}/api/client' 
 ```
 
 ### Response
